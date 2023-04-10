@@ -23,17 +23,10 @@ public class FileReader {
 
             return new Profile(name, age, email, phoneNumber);
         } catch (FileNotFoundException e) {
-            System.err.println("file not found");
+            e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }
         return null;
-    }
-
-    public static void main(String[] args) {
-        FileReader fileReader = new FileReader();
-        File file = new File("src/main/resources/Profile.txt");
-        Profile profile = fileReader.getDataFromFile(file);
-        System.out.println(profile);
     }
 }
