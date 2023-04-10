@@ -22,8 +22,6 @@ public class FileReader {
             Long phoneNumber = Long.parseLong(lines[3].trim().split(regex)[1]);
 
             return new Profile(name, age, email, phoneNumber);
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }
